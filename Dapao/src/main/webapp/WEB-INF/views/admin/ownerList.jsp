@@ -34,13 +34,14 @@
 
 			var ownId = $(this).text();
 			$.ajax({
-				url : "/admin/ownInfo",
+				url : "/admin/ownerInfo",
 				data : {
 					"own_id" : ownId
 				},
 				dataType : "json",
 				success : function(data) {
-					$('#ownInfo').text(data.own_id + data.own_name);
+					console.log(data)
+					$('#ownInfo').text(data.own_id+" "+data.own_name+" ");
 				},
 				error : function() {
 					console.log("오류");
