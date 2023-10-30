@@ -1,5 +1,6 @@
 package com.dapao.domain;
 
+import org.springframework.web.multipart.MultipartFile;
 
 import lombok.Data;
 
@@ -21,8 +22,7 @@ public class EntVO {
 	private String ent_notice;
 	private String ent_info;
 	private String ent_img;
-	private String ent_ot;
-	private String ent_ct;
+	private String ent_time;
 	private Integer ent_account;
 	private Integer ent_stop;
 
