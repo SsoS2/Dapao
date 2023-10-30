@@ -19,5 +19,40 @@
 	<select id="userInfo" resultType="UserVO">
 		select * from user where us_id=#{us_id}
 	</select>
+	
+	<!-- 사업자정보출력 -->
+	<select id="ownerInfo" resultType="EntVO">
+		select * from ent where own_id=#{own_id}
+	</select>
+	
+	<!-- 사업자 정보 업데이트 -->
+	<update id="ownerInfoUpdate">
+		update ent
+		set own_name=#{own_name},own_tel=#{own_tel},own_email=#{own_email},own_state=#{own_state}, ent_name=#{ent_name}, ent_cate=#{ent_cate}, ent_addr=#{ent_addr}, ent_mo=#{ent_mo}, ent_file=#{ent_file},ent_of=#{ent_of}, ent_notice=#{ent_notice},ent_info=#{ent_info},ent_img=#{ent_img},ent_time=#{ent_time}, ent_account=#{ent_account}, ent_stop=#{ent_stop} 
+		where own_id=#{own_id}
+	</update>
+	
+	<!-- 사업자 탈퇴 -->
+	<update id="ownerInfoDelete">
+		update ent set own_state=2 
+		where own_id=#{own_id}
+	</update>
+	
+	<!-- FAQ 리스트 -->
+	<select id="FAQList" resultType="CsVO">
+		select * from cs where cs_board = 1
+	</select>
+	
+	<!-- FAQ 1개 정보 -->
+	<select id="FAQInfo" resultType="CsVO">
+		select * from cs where cs_no = #{cs_no}
+	</select>
+	
+	<!-- 개인회원정보수정 -->
+	<update id="userInfoUpdate">
+		update user set us_pw=#{us_pw},us_name=#{us_name},us_nickname=#{us_nickname},us_img=#{us_img},us_tel=#{us_tel},us_email=#{us_email},us_addr=#{us_addr},us_coin=#{us_coin},us_blog=#{us_blog},us_instar=#{us_instar},us_state=#{us_state},us_account=#{us_account},us_stop=#{us_stop} 
+		where us_id=#{us_id}
+	</update>
+	<!-- 개인회원정보수정 -->
 
  </mapper> 
