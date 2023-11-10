@@ -15,6 +15,6 @@ public class ExpVO {
 	private String exp_notice;
 	private Date exp_regdate;
 	private String own_id;
-	private Integer exp_state;
+	private int exp_state;
 
 }

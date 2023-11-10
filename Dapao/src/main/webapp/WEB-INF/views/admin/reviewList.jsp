@@ -155,7 +155,7 @@
 					dataType : "json",
 					success : function(data) {
 						alert("삭제완료");
-						location.replace("/admin/reviewList?page=${param.page}");
+						location.replace("/admin/reviewList");
 					},
 					error : function() {
 						console.log("오류");
